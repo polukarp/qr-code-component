@@ -21,8 +21,20 @@ body {
 }
 
 .card__qr {
-  max-width: 100%;
+  overflow: hidden;
   border-radius: .5em;
+  aspect-ratio: 1/1;
+}
+
+.card__qr img {
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: .7s;
+  max-width: 100%;
+  border-radius: inherit;
+}
+
+.card__qr img:hover {
+  transform: scale(1.2);
 }
 
 .card__title {
@@ -34,4 +46,8 @@ body {
 .card__subtitle {
   font-size: 15px;
   color: #7b879d;
+}
+
+.card__subtitle:hover {
+  color: #1f3251;
 }

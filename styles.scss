@@ -30,16 +30,34 @@ body {
     text-align: center;
     margin: 1em;
     &__qr {
-        max-width: 100%;
+        overflow: hidden;
         border-radius: .5em;
+        aspect-ratio: 1/1;
+        img {
+            transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+            transition-duration: .7s;
+            max-width: 100%;
+            border-radius: inherit;
+            
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        
     }
     &__title {
         font-size: 1.4em;
         margin-top: 1em;
         color: $dark-blue;
+
+
     }
     &__subtitle {
         font-size: $fz-p;
         color: $blue;
+
+        &:hover {
+            color: $dark-blue;
+        }
     }
 }
